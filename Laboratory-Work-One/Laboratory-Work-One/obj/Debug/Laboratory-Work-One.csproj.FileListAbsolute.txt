@@ -1,0 +1,16 @@
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\NUnit3.TestAdapter.dll
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\NUnit3.TestAdapter.pdb
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\nunit.engine.dll
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\nunit.engine.api.dll
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\nunit.engine.core.dll
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\testcentric.engine.metadata.dll
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\Laboratory-Work-One.dll
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\Laboratory-Work-One.pdb
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\nunit.framework.dll
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\bin\Debug\nunit.framework.xml
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\obj\Debug\Laboratory-Work-One.csprojAssemblyReference.cache
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\obj\Debug\Laboratory-Work-One.csproj.CoreCompileInputs.cache
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\obj\Debug\Laboratory-Work-One.csproj.CopyComplete
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\obj\Debug\Laboratory-Work-One.dll
+D:\Institute\Семестр 7\Тестирование\Лабораторная работа 1\Laboratory Work One\Testing-Laboratory-Work\Laboratory-Work-One\Laboratory-Work-One\obj\Debug\Laboratory-Work-One.pdb

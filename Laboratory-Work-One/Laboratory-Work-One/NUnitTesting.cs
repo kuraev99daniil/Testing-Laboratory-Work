@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Laboratory_Work_One
 {
@@ -141,18 +142,22 @@ namespace Laboratory_Work_One
         [Test]
         public void AddVacancy()
         {
-            personalDepartment.AddVacancy(
-                new Vacancy()
-                {
-                    Date = "11.11.2005",
-                    Title = ".NET-программист",
-                    Description = "Требуется SENIOR .NET-программист ",
-                    EstimatedSalary = 50_000,
-                    AdditionLink = "https://some_link"
-                }
-            );
+            var vacancy = new Vacancy()
+            {
+                Date = "11.11.2005",
+                Title = ".NET-программист",
+                Description = "Требуется SENIOR .NET-программист ",
+                EstimatedSalary = 50_000,
+                AdditionLink = "https://some_link"
+            };
 
-            var findedVacancy = personalDepartment.ListVacancies.Find(vacancy => vacancy.Title == ".NET-программист");
+            Assert.IsNull(GetVacancy(vacancy));
+
+            personalDepartment.AddVacancy(vacancy);
+
+            Assert.IsNotNull(GetVacancy(vacancy));
+
+            var findedVacancy = personalDepartment.ListVacancies.Find(v => v.Title == ".NET-программист");
 
             Assert.IsNotNull(findedVacancy);
         }
@@ -164,25 +169,36 @@ namespace Laboratory_Work_One
 
             var isRemoved = personalDepartment.RemoveVacancy(vacancy);
 
+            Assert.IsNull(GetVacancy(vacancy));
+
             Assert.IsTrue(isRemoved);
+        }
+
+        private Vacancy GetVacancy(Vacancy vacancy)
+        {
+            return personalDepartment.ListVacancies.FirstOrDefault(v => v == vacancy);
         }
 
         [Test]
         public void AddEmployee()
         {
-            personalDepartment.AddEmployee(
-                new Employee()
-                {
-                    Surname = "Николаев",
-                    Name = "Максим",
-                    MiddleName = "Константинович",
-                    PassportSeries = 129856,
-                    PassportNumber = 5678,
-                    Age = 25,
-                    Post = "Инженер",
-                    Salary = 15_000
-                }
-            );
+            var employee = new Employee()
+            {
+                Surname = "Николаев",
+                Name = "Максим",
+                MiddleName = "Константинович",
+                PassportSeries = 129856,
+                PassportNumber = 5678,
+                Age = 25,
+                Post = "Инженер",
+                Salary = 15_000
+            };
+
+            Assert.IsNull(GetEmployee(employee));
+
+            personalDepartment.AddEmployee(employee);
+
+            Assert.IsNotNull(GetEmployee(employee));
 
             var findedEmployee = personalDepartment.ListEmployees.Find(e => e.PassportSeries == 129856 && e.PassportNumber == 5678);
 
@@ -196,7 +212,14 @@ namespace Laboratory_Work_One
 
             var isRemoved = personalDepartment.RemoveEmployee(employee);
 
+            Assert.IsNull(GetEmployee(employee));
+
             Assert.IsTrue(isRemoved);
+        }
+
+        private Employee GetEmployee(Employee employee)
+        {
+            return personalDepartment.ListEmployees.FirstOrDefault(e => e == employee);
         }
 
         [Test]

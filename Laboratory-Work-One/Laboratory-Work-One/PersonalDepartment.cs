@@ -44,5 +44,35 @@ namespace Laboratory_Work_One
             return ListVacancies.First();
         }
 
+        public void AddVacancy(Vacancy vacancy)
+        {
+            ListVacancies.Add(vacancy);
+        }
+
+        public bool RemoveVacancy(Vacancy vacancy)
+        {
+            return ListVacancies.Remove(vacancy);
+        }
+
+        public void AddEmployee(Employee employee)
+        {
+            ListEmployees.Add(employee);
+        }
+
+        public bool RemoveEmployee(Employee employee)
+        {
+            return ListEmployees.Remove(employee);
+        }
+
+        public Employee GetEmployee(int passportSeries, int passportNumber)
+        {
+            return ListEmployees.Find(employee => employee.PassportSeries == passportSeries && employee.PassportNumber == passportNumber);
+        }
+
+        // Добавить сотрудника
+        // Удалить вакансию
+        // Уволить сотрудника
+        // Проверить является ли сотрудник по паспорту
+
     }
 }

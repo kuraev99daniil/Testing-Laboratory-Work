@@ -35,6 +35,8 @@ namespace Laboratory_Work_One
                         Surname = "Николаев",
                         Name = "Максим",
                         MiddleName = "Константинович",
+                        PassportSeries = 129856,
+                        PassportNumber = 5678,
                         Age = 25,
                         Post = "Инженер",
                         Salary = 15_000
@@ -44,6 +46,8 @@ namespace Laboratory_Work_One
                          Surname = "Ермилов",
                         Name = "Андрей",
                         MiddleName = "Глебович",
+                        PassportSeries = 543456,
+                        PassportNumber = 5678,
                         Age = 31,
                         Post = "Заведущий",
                         Salary = 35_000
@@ -53,6 +57,8 @@ namespace Laboratory_Work_One
                          Surname = "Семенов",
                         Name = "Николай",
                         MiddleName = "Святославович",
+                        PassportSeries = 123589,
+                        PassportNumber = 5678,
                         Age = 30,
                         Post = "Бухгалтер",
                         Salary = 25_000
@@ -130,6 +136,73 @@ namespace Laboratory_Work_One
         public void AnalyseVacancy()
         {
             Assert.IsInstanceOf<Vacancy>(personalDepartment.GetFirstVacancy());
+        }
+
+        [Test]
+        public void AddVacancy()
+        {
+            personalDepartment.AddVacancy(
+                new Vacancy()
+                {
+                    Date = "11.11.2005",
+                    Title = ".NET-программист",
+                    Description = "Требуется SENIOR .NET-программист ",
+                    EstimatedSalary = 50_000,
+                    AdditionLink = "https://some_link"
+                }
+            );
+
+            var findedVacancy = personalDepartment.ListVacancies.Find(vacancy => vacancy.Title == ".NET-программист");
+
+            Assert.IsNotNull(findedVacancy);
+        }
+
+        [Test]
+        public void RemoveVacancy()
+        {
+            var vacancy = personalDepartment.ListVacancies.Find(v => v.Title == "IT-специалист");
+
+            var isRemoved = personalDepartment.RemoveVacancy(vacancy);
+
+            Assert.IsTrue(isRemoved);
+        }
+
+        [Test]
+        public void AddEmployee()
+        {
+            personalDepartment.AddEmployee(
+                new Employee()
+                {
+                    Surname = "Николаев",
+                    Name = "Максим",
+                    MiddleName = "Константинович",
+                    PassportSeries = 129856,
+                    PassportNumber = 5678,
+                    Age = 25,
+                    Post = "Инженер",
+                    Salary = 15_000
+                }
+            );
+
+            var findedEmployee = personalDepartment.ListEmployees.Find(e => e.PassportSeries == 129856 && e.PassportNumber == 5678);
+
+            Assert.IsNotNull(findedEmployee);
+        }
+
+        [Test]
+        public void RemoveEmployee()
+        {
+            var employee = personalDepartment.ListEmployees.Find(e => e.PassportSeries == 129856 && e.PassportNumber == 5678);
+
+            var isRemoved = personalDepartment.RemoveEmployee(employee);
+
+            Assert.IsTrue(isRemoved);
+        }
+
+        [Test]
+        public void HasEmployee()
+        {
+            Assert.IsNotNull(personalDepartment.GetEmployee(543456, 5678));
         }
 
     }

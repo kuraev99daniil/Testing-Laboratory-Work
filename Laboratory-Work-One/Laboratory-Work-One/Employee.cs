@@ -5,6 +5,8 @@
         public string Surname { get; set; }
         public string Name { get; set; }
         public string MiddleName { get; set; }
+        public int PassportSeries { get; set; }
+        public int PassportNumber { get; set; }
         public int Age { get; set; }
         public string Post { get; set; }
         public int Salary { get; set; }

@@ -53,8 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.cs" />
     <Compile Include="NUnitTesting.cs" />
+    <Compile Include="PersonalDepartment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResigningPerson.cs" />
+    <Compile Include="Vacancy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

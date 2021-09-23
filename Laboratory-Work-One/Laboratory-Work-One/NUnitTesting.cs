@@ -98,7 +98,7 @@ namespace Laboratory_Work_One
         {
             foreach (string description in personalDepartment.GetDescriptionVacancy())
             {
-                Assert.Greater(10, description.Length);
+                Assert.Less(10, description.Length);
             } 
         }
 
@@ -111,13 +111,13 @@ namespace Laboratory_Work_One
         [Test]
         public void AnalyseOpening()
         {
-            Assert.IsFalse(personalDepartment.IsOpened);
+            Assert.IsTrue(personalDepartment.IsOpened);
         }
 
         [Test]
         public void AnalyseCountResigning()
         {
-            Assert.AreEqual(5, personalDepartment.GetCountResigningPerson());
+            Assert.AreNotEqual(5, personalDepartment.GetCountResigningPerson());
         }
 
         [Test]
@@ -129,7 +129,7 @@ namespace Laboratory_Work_One
         [Test]
         public void AnalyseVacancy()
         {
-            Assert.IsInstanceOf<Vacancy>(personalDepartment.GetFirstVacancy());
+            Assert.IsNotInstanceOf<Vacancy>(personalDepartment.GetFirstVacancy());
         }
 
     }

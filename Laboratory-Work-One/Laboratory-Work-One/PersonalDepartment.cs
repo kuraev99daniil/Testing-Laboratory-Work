@@ -41,7 +41,7 @@ namespace Laboratory_Work_One
 
         public object GetFirstVacancy()
         {
-            return ListEmployees.First();
+            return ListVacancies.First();
         }
 
     }

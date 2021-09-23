@@ -129,7 +129,7 @@ namespace Laboratory_Work_One
         [Test]
         public void AnalyseVacancy()
         {
-            Assert.IsNotInstanceOf<Vacancy>(personalDepartment.GetFirstVacancy());
+            Assert.IsInstanceOf<Vacancy>(personalDepartment.GetFirstVacancy());
         }
 
     }

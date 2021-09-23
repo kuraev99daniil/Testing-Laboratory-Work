@@ -98,7 +98,7 @@ namespace Laboratory_Work_One
         {
             foreach (string description in personalDepartment.GetDescriptionVacancy())
             {
-                Assert.Less(description.Length, 10);
+                Assert.Greater(description.Length, 10);
             } 
         }
 
